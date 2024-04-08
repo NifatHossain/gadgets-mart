@@ -10,7 +10,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
-<body class="max-w-7xl mx-auto">
+<body class="max-w-7xl mx-auto p-2 md:p-0">
     <header>
         <nav>
             <div class="navbar bg-base-100">
@@ -19,7 +19,7 @@
                     <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </div>
-                    <ul tabindex="0" class="menu font-semibold text-lg menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <ul tabindex="0" class="menu bg-white text-black  font-semibold text-lg menu-sm dropdown-content mt-3 z-[1] p-2 shadow  rounded-box w-52">
                       <li><a>Home</a></li>
                       <li><a>mobile</a></li>
                       <li><a>laptop</a></li>
@@ -45,21 +45,21 @@
     <main>
         
 <!-- Carousel -->
-<div id="default-carousel" class="relative w-full" data-carousel="slide">
+<div id="default-carousel" class="relative w-full " data-carousel="slide">
     <!-- Carousel wrapper -->
-    <div class="relative h-56 overflow-hidden bg-slate-50 rounded-lg md:h-[554px]">
+    <div class="relative h-56 w-full overflow-hidden bg-slate-50 rounded-lg md:h-[554px]">
          <!-- Item 1 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
             <div class="absolute block  w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
                 <div class="flex gap-5 justify-evenly  items-center">
                     <div class="flex flex-col gap-8">
-                        <h2 class="text-3xl font-bold">Brand new Samsung Galaxy s20 series <br> Enjoy upto 15% discounts</h2>
+                        <h2 class=" text-base md:text-3xl font-bold">Brand new Samsung Galaxy s20 series <br> Enjoy upto 15% discounts</h2>
                         <div>
-                            <button class="btn bg-slate-400 text-white font-semibold">Show Details</button>
+                            <button class="btn bg-slate-400 text-white font-semibold hidden md:block">Show Details</button>
                             <button class="btn bg-green-400 text-white font-semibold">Buy Now</button>
                         </div>
                     </div>
-                    <img class="h-[394px]" src="images/Galaxy-S20_S20_S20_Ultra_5G_full_rgb-950x715.png"  alt="...">
+                    <img class="h-28 md:h-[394px]" src="images/Galaxy-S20_S20_S20_Ultra_5G_full_rgb-950x715.png"  alt="...">
                 </div>
                 
             </div>
@@ -70,13 +70,13 @@
             <div class="absolute block  w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
                 <div class="flex gap-5 justify-evenly  items-center">
                     <div class="flex flex-col gap-8">
-                        <h2 class="text-3xl font-bold">Explore Apple iPhone 15 series <br> Enjoy upto 10% discounts</h2>
+                        <h2 class="text-base md:text-3xl font-bold">Explore Apple iPhone 15 series <br> Enjoy upto 10% discounts</h2>
                         <div>
-                            <button class="btn bg-slate-400 text-white font-semibold">Show Details</button>
+                            <button class="btn bg-slate-400 text-white font-semibold hidden md:block">Show Details</button>
                             <button class="btn bg-green-400 text-white font-semibold">Buy Now</button>
                         </div>
                     </div>
-                    <img class="h-[394px]" src="images/apple-iphone-15-pro-2.jpg"  alt="...">
+                    <img class="h-28 md:h-[394px]" src="images/apple-iphone-15-pro-2.jpg"  alt="...">
                 </div>
                 
             </div>
@@ -87,13 +87,13 @@
             <div class="absolute block  w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
                 <div class="flex  justify-around items-center">
                     <div class="flex flex-col gap-8">
-                        <h2 class="text-3xl font-bold">Hp Pavillion series <br> Experience smoothness with<br>Intel® Core™ i5 1135G7 11th Generation </h2>
+                        <h2 class="text-base md:text-3xl font-bold">Hp Pavillion series <br> Experience smoothness with<br>Intel® Core™ i5 1135G7 11th Generation </h2>
                         <div>
-                            <button class="btn bg-slate-400 text-white font-semibold">Show Details</button>
+                            <button class="btn bg-slate-400 text-white font-semibold hidden md:block">Show Details</button>
                             <button class="btn bg-green-400 text-white font-semibold">Buy Now</button>
                         </div>
                     </div>
-                    <img class="h-[394px]" src="images/hp-pavillion.png"  alt="...">
+                    <img class="h-28 md:h-[394px]" src="images/hp-pavillion.png"  alt="...">
                 </div>
                 
             </div>
@@ -104,13 +104,13 @@
             <div class="absolute block  w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
                 <div class="flex gap-5 justify-evenly  items-center">
                     <div class="flex flex-col gap-8">
-                        <h2 class="text-3xl font-bold">Track your Fitness easily <br> Explore our Smart watch section</h2>
+                        <h2 class="text-base md:text-3xl font-bold">Track your Fitness easily <br> Explore our Smart watch section</h2>
                         <div>
                             <button class="btn bg-green-400 text-white font-semibold">Explore Now</button>
                             <!-- <button class="btn bg-green-400 text-white font-semibold">Buy Now</button> -->
                         </div>
                     </div>
-                    <img class="h-[394px]" src="images/apple-watch.jpg"  alt="...">
+                    <img class="h-28 md:h-[394px]" src="images/apple-watch.jpg"  alt="...">
                 </div>
                 
             </div>
@@ -163,7 +163,7 @@
         <!-- Phone Section -->
         <section class="my-8">
             <h1 class="text-3xl text-center font-bold p-3 bg-slate-100 mb-8 rounded-xl">Phones</h1>
-            <div class="grid grid-cols-4 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <!-- card -->
                 <div class="border-2 spacey-3 p-3 rounded-xl cursor-pointer hover:scale-105  transition-transform duration-300 transform origin-center">
                     <div class="w-full flex justify-center">
@@ -259,7 +259,7 @@
         <!-- Laptop section -->
         <section class="my-8 bg-slate-5">
             <h1 class="text-3xl text-center font-bold p-3 bg-slate-100 mb-8 rounded-xl cursor-pointer hover:scale-105  transition-transform duration-300 transform origin-center">Laptop</h1>
-            <div class="grid grid-cols-4 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <!-- card -->
                 <div class="border-2 spacey-3 p-3 rounded-xl cursor-pointer hover:scale-105  transition-transform duration-300 transform origin-center">
                     <div class="w-full flex justify-center">
@@ -355,7 +355,7 @@
         <!-- Smart Watch section -->
         <section class="my-8">
             <h1 class="text-3xl text-center font-bold p-3 bg-slate-100 mb-8 rounded-xl cursor-pointer hover:scale-105  transition-transform duration-300 transform origin-center">Smart Watches</h1>
-            <div class="grid grid-cols-4 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <!-- card -->
                 <div class="border-2 spacey-3 p-3 rounded-xl cursor-pointer hover:scale-105  transition-transform duration-300 transform origin-center">
                     <div class="w-full flex justify-center">
