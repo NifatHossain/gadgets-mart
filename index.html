@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gadgets Mart</title>
+    <!-- DaisyUi + Tailwind+ flow bite -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="max-w-7xl mx-auto">
+    <header>
+        <nav>
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                  <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    </div>
+                    <ul tabindex="0" class="menu font-semibold text-lg menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                      <li><a>Home</a></li>
+                      <li><a>mobile</a></li>
+                      <li><a>laptop</a></li>
+                      <li><a>others</a></li>
+                    </ul>
+                  </div>
+                  <a class="btn btn-ghost text-xl font-bold">Gadgets Mart</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                  <ul class="menu font-semibold text-lg menu-horizontal px-1">
+                    <li><a>Home</a></li>
+                    <li><a>mobile</a></li>
+                    <li><a>laptop</a></li>
+                    <li><a>others</a></li>
+                  </ul>
+                </div>
+                <div class="navbar-end">
+                  <a class="btn">Login</a>
+                </div>
+              </div>
+        </nap-3 rounded-xlv>
+    </header>
+    <main>
+        
+<!-- Carousel -->
+<div id="default-carousel" class="relative w-full" data-carousel="slide">
+    <!-- Carousel wrapper -->
+    <div class="relative h-56 overflow-hidden bg-slate-50 rounded-lg md:h-[554px]">
+         <!-- Item 1 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <div class="absolute block  w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                <div class="flex gap-5 justify-evenly  items-center">
+                    <div class="flex flex-col gap-8">
+                        <h2 class="text-3xl font-bold">Brand new Samsung Galaxy s20 series <br> Enjoy upto 15% discounts</h2>
+                        <div>
+                            <button class="btn bg-slate-400 text-white font-semibold">Show Details</button>
+                            <button class="btn bg-green-400 text-white font-semibold">Buy Now</button>
+                        </div>
+                    </div>
+                    <img class="h-[394px]" src="images/Galaxy-S20_S20_S20_Ultra_5G_full_rgb-950x715.png"  alt="...">
+                </div>
+                
+            </div>
+            
+        </div>
+        <!-- Item 2 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <div class="absolute block  w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                <div class="flex gap-5 justify-evenly  items-center">
+                    <div class="flex flex-col gap-8">
+                        <h2 class="text-3xl font-bold">Explore Apple iPhone 15 series <br> Enjoy upto 10% discounts</h2>
+                        <div>
+                            <button class="btn bg-slate-400 text-white font-semibold">Show Details</button>
+                            <button class="btn bg-green-400 text-white font-semibold">Buy Now</button>
+                        </div>
+                    </div>
+                    <img class="h-[394px]" src="images/apple-iphone-15-pro-2.jpg"  alt="...">
+                </div>
+                
+            </div>
+            
+        </div>
+        <!-- Item 3 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <div class="absolute block  w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                <div class="flex  justify-around items-center">
+                    <div class="flex flex-col gap-8">
+                        <h2 class="text-3xl font-bold">Hp Pavillion series <br> Experience smoothness with<br>Intel® Core™ i5 1135G7 11th Generation </h2>
+                        <div>
+                            <button class="btn bg-slate-400 text-white font-semibold">Show Details</button>
+                            <button class="btn bg-green-400 text-white font-semibold">Buy Now</button>
+                        </div>
+                    </div>
+                    <img class="h-[394px]" src="images/hp-pavillion.png"  alt="...">
+                </div>
+                
+            </div>
+            
+        </div>
+        <!-- Item 4 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <div class="absolute block  w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                <div class="flex gap-5 justify-evenly  items-center">
+                    <div class="flex flex-col gap-8">
+                        <h2 class="text-3xl font-bold">Track your Fitness easily <br> Explore our Smart watch section</h2>
+                        <div>
+                            <button class="btn bg-green-400 text-white font-semibold">Explore Now</button>
+                            <!-- <button class="btn bg-green-400 text-white font-semibold">Buy Now</button> -->
+                        </div>
+                    </div>
+                    <img class="h-[394px]" src="images/apple-watch.jpg"  alt="...">
+                </div>
+                
+            </div>
+            
+        </div>
+        <!-- Item 5 -->
+        <!-- <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <div class="absolute block  w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                <div class="flex gap-5 justify-evenly  items-center">
+                    <div class="flex flex-col gap-8">
+                        <h2 class="text-3xl font-bold">Brand new Galaxy s20 series <br> Enjoy upto 15% discounts</h2>
+                        <div>
+                            <button class="btn bg-slate-400 text-white font-semibold">Show Details</button>
+                            <button class="btn bg-green-400 text-white font-semibold">Buy Now</button>
+                        </div>
+                    </div>
+                    <img class="h-[394px]" src="images/Galaxy-S20_S20_S20_Ultra_5G_full_rgb-950x715.png"  alt="...">
+                </div>
+                
+            </div>
+            
+        </div> -->
+    </div>
+    <!-- Slider indicators -->
+    <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+        <button type="button" class="w-3 h-3  rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+        <button type="button" class="w-3 h-3  rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+        <button type="button" class="w-3 h-3  rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+        <button type="button" class="w-3 h-3  rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+        <!-- <button type="button" class="w-3 h-3  rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button> -->
+    </div>
+    <!-- Slider controls -->
+    <button type="button" class="absolute  top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-300 dark:bg-gray-800/30 group-hover:bg-slate-400 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4  dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+            </svg>
+            <span class="sr-only">Previous</span>
+        </span>
+    </button>
+    <button type="button" class="absolute  top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-300 dark:bg-gray-800/30 group-hover:bg-slate-400 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+            </svg>
+            <span class="sr-only">Next</span>
+        </span>
+    </button>
+</div>
+        <!-- Phone Section -->
+        <section class="my-8">
+            <h1 class="text-3xl text-center font-bold p-3 bg-slate-100 mb-8 rounded-xl">Phones</h1>
+            <div class="grid grid-cols-4 gap-4">
+                <!-- card -->
+                <div class="border-2 spacey-3 p-3 rounded-xl cursor-pointer hover:scale-105  transition-transform duration-300 transform origin-center">
+                    <div class="w-full flex justify-center">
+                        <img class="w-72 h-56" src="images/s23.webp" alt="">
+                    </div>
+                    <h3 class="text-center text-lg font-bold mb-2">Samsung Galaxy s23</h3>
+                    <p class="text-center font-semibold mb-2">220000 tk</p>
+                    <div class="flex gap-2 justify-center">
+                        <button class="btn bg-slate-500 text-white ">Compare</button>
+                        <button class="btn bg-green-500 text-white ">Buy Now</button>
+                    </div>
+                </div>
+                <div class="border-2 spacey-3 p-3 rounded-xl cursor-pointer hover:scale-105  transition-transform duration-300 transform origin-center">
+                    <div class="w-full flex justify-center">
+                        <img class="w-72 h-56" src="images/iPhone-15-Plus-(2)-(3)-1073.jpg" alt="">
+                    </div>
+                    <h3 class="text-center text-lg font-bold mb-2">Apple iphone 15 pro max</h3>
+                    <p class="text-center font-semibold mb-2">154000 tk</p>
+                    <div class="flex gap-2 justify-center">
+                        <button class="btn bg-slate-500 text-white ">Compare</button>
+                        <button class="btn bg-green-500 text-white ">Buy Now</button>
+                    </div>
+                </div>
+                <div class="border-2 spacey-3 p-3 rounded-xl cursor-pointer hover:scale-105  transition-transform duration-300 transform origin-center">
+                    <div class="w-full flex justify-center">
+                        <img class="w-72 h-56" src="images/s22+.webp" alt="">
+                    </div>
+                    <h3 class="text-center text-lg font-bold mb-2">Samsung Galaxy s22+</h3>
+                    <p class="text-center font-semibold mb-2">220000 tk</p>
+                    <div class="flex gap-2 justify-center">
+                        <button class="btn bg-slate-500 text-white ">Compare</button>
+                        <button class="btn bg-green-500 text-white ">Buy Now</button>
+                    </div>
+                </div>
+                <div class="border-2 spacey-3 p-3 rounded-xl cursor-pointer hover:scale-105  transition-transform duration-300 transform origin-center ">
+                    <div class="w-full flex justify-center">
+                        <img class="w-72 h-56" src="images/A53.webp" alt="">
+                    </div>
+                    <h3 class="text-center text-lg font-bold mb-2">Samsung Galaxy A53</h3>
+                    <p class="text-center font-semibold mb-2">220000 tk</p>
+                    <div class="flex gap-2 justify-center">
+                        <button class="btn bg-slate-500 text-white ">Compare</button>
+                        <button class="btn bg-green-500 text-white ">Buy Now</button>
+                    </div>
+                </div>
+                <!-- second row -->
+                <div class="border-2 spacey-3 p-3 rounded-xl cursor-pointer hover:scale-105  transition-transform duration-300 transform origin-center">
+                    <div class="w-full flex justify-center">
+                        <img class="w-72 h-56" src="images/A71.webp" alt="">
+                    </div>
+                    <h3 class="text-center text-lg font-bold mb-2">Samsung Galaxy A71</h3>
+                    <p class="text-center font-semibold mb-2">220000 tk</p>
+                    <div class="flex gap-2 justify-center">
+                        <button class="btn bg-slate-500 text-white ">Compare</button>
+                        <button class="btn bg-green-500 text-white ">Buy Now</button>
+                    </div>
+                </div>
+                <div class="border-2 spacey-3 p-3 rounded-xl cursor-pointer hover:scale-105  transition-transform duration-300 transform origin-center">
+                    <div class="w-full flex justify-center">
+                        <img class="w-72 h-56" src="images/iPhone-15-Plus-(2)-(3)-1073.jpg" alt="">
+                    </div>
+                    <h3 class="text-center text-lg font-bold mb-2">Apple iphone 15 pro max</h3>
+                    <p class="text-center font-semibold mb-2">154000 tk</p>
+                    <div class="flex gap-2 justify-center">
+                        <button class="btn bg-slate-500 text-white ">Compare</button>
+                        <button class="btn bg-green-500 text-white ">Buy Now</button>
+                    </div>
+                </div>
+                <div class="border-2 spacey-3 p-3 rounded-xl cursor-pointer hover:scale-105  transition-transform duration-300 transform origin-center">
+                    <div class="w-full flex justify-center">
+                        <img class=" h-56" src="images/vivi v30.png" alt="">
+                    </div>
+                    <h3 class="text-center text-lg font-bold mb-2">vivo v30 5g</h3>
+                    <p class="text-center font-semibold mb-2">59700 tk</p>
+                    <div class="flex gap-2 justify-center">
+                        <button class="btn bg-slate-500 text-white ">Compare</button>
+                        <button class="btn bg-green-500 text-white ">Buy Now</button>
+                    </div>
+                </div>
+                <div class="border-2 spacey-3 p-3 rounded-xl cursor-pointer hover:scale-105  transition-transform duration-300 transform origin-center ">
+                    <div class="w-full flex justify-center">
+                        <img class=" h-56" src="images/oneplus12.png" alt="">
+                    </div>
+                    <h3 class="text-center text-lg font-bold mb-2">Oneplus 12</h3>
+                    <p class="text-center font-semibold mb-2">65000 tk</p>
+                    <div class="flex gap-2 justify-center">
+                        <button class="btn bg-slate-500 text-white ">Compare</button>
+                        <button class="btn bg-green-500 text-white ">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Laptop section -->
+        <section class="my-8 bg-slate-5">
+            <h1 class="text-3xl text-center font-bold p-3 bg-slate-100 mb-8 rounded-xl cursor-pointer hover:scale-105  transition-transform duration-300 transform origin-center">Laptop</h1>
+            <div class="grid grid-cols-4 gap-4">
+                <!-- card -->
+                <div class="border-2 spacey-3 p-3 rounded-xl cursor-pointer hover:scale-105  transition-transform duration-300 transform origin-center">
+                    <div class="w-full flex justify-center">
+                        <img class="w-72 h-56" src="images/hp-pavillion-card.png" alt="">
+                    </div>
+                    <h3 class="text-center text-lg font-bold mb-2">HP pavillion i5 gen-13</h3>
+                    <p class="text-center font-semibold mb-2">89000 tk</p>
+                    <div class="flex gap-2 justify-center">
+                        <button class="btn bg-slate-500 text-white ">Compare</button>
+                        <button class="btn bg-green-500 text-white ">Buy Now</button>
+                    </div>
+                </div>
+                <div class="border-2 spacey-3 p-3 rounded-xl cursor-pointer hover:scale-105  transition-transform duration-300 transform origin-center">
+                    <div class="w-full flex justify-center">
+                        <img class="w-72 h-56" src="images/acer.jpg" alt="">
+                    </div>
+                    <h3 class="text-center text-lg font-bold mb-2">Acer Aspire5 i5 gen-10</h3>
+                    <p class="text-center font-semibold mb-2">69800 tk</p>
+                    <div class="flex gap-2 justify-center">
+                        <button class="btn bg-slate-500 text-white ">Compare</button>
+                        <button class="btn bg-green-500 text-white ">Buy Now</button>
+                    </div>
+                </div>
+                <div class="border-2 spacey-3 p-3 rounded-xl cursor-pointer hover:scale-105  transition-transform duration-300 transform origin-center">
+                    <div class="w-full flex justify-center">
+                        <img class="w-72 h-56" src="images/dell-inspiron.jpg" alt="">
+                    </div>
+                    <h3 class="text-center text-lg font-bold mb-2">Dell Inspiron 14 i5 gen-12</h3>
+                    <p class="text-center font-semibold mb-2">82000 tk</p>
+                    <div class="flex gap-2 justify-center">
+                        <button class="btn bg-slate-500 text-white ">Compare</button>
+                        <button class="btn bg-green-500 text-white ">Buy Now</button>
+                    </div>
+                </div>
+                <div class="border-2 spacey-3 p-3 rounded-xl cursor-pointer hover:scale-105  transition-transform duration-300 transform origin-center ">
+                    <div class="w-full flex justify-center">
+                        <img class="w-72 h-56" src="images/lenovo-ideapad.webp" alt="">
+                    </div>
+                    <h3 class="text-center text-lg font-bold mb-2">Lenovo ideapad AMD Athlon™ Gold 7220U</h3>
+                    <p class="text-center font-semibold mb-2">45000 tk</p>
+                    <div class="flex gap-2 justify-center">
+                        <button class="btn bg-slate-500 text-white ">Compare</button>
+                        <button class="btn bg-green-500 text-white ">Buy Now</button>
+                    </div>
+                </div>
+                <!-- second row -->
+                <div class="border-2 spacey-3 p-3 rounded-xl cursor-pointer hover:scale-105  transition-transform duration-300 transform origin-center">
+                    <div class="w-full flex justify-center">
+                        <img class="w-72 h-56" src="images/hp-pavillion-card.png" alt="">
+                    </div>
+                    <h3 class="text-center text-lg font-bold mb-2">HP pavillion i5 gen-13</h3>
+                    <p class="text-center font-semibold mb-2">89000 tk</p>
+                    <div class="flex gap-2 justify-center">
+                        <button class="btn bg-slate-500 text-white ">Compare</button>
+                        <button class="btn bg-green-500 text-white ">Buy Now</button>
+                    </div>
+                </div>
+                <div class="border-2 spacey-3 p-3 rounded-xl cursor-pointer hover:scale-105  transition-transform duration-300 transform origin-center">
+                    <div class="w-full flex justify-center">
+                        <img class="w-72 h-56" src="images/acer.jpg" alt="">
+                    </div>
+                    <h3 class="text-center text-lg font-bold mb-2">Acer Aspire5 i5 gen-10</h3>
+                    <p class="text-center font-semibold mb-2">69800 tk</p>
+                    <div class="flex gap-2 justify-center">
+                        <button class="btn bg-slate-500 text-white ">Compare</button>
+                        <button class="btn bg-green-500 text-white ">Buy Now</button>
+                    </div>
+                </div>
+                <div class="border-2 spacey-3 p-3 rounded-xl cursor-pointer hover:scale-105  transition-transform duration-300 transform origin-center">
+                    <div class="w-full flex justify-center">
+                        <img class="w-72 h-56" src="images/dell-inspiron.jpg" alt="">
+                    </div>
+                    <h3 class="text-center text-lg font-bold mb-2">Dell Inspiron 14 i5 gen-12</h3>
+                    <p class="text-center font-semibold mb-2">82000 tk</p>
+                    <div class="flex gap-2 justify-center">
+                        <button class="btn bg-slate-500 text-white ">Compare</button>
+                        <button class="btn bg-green-500 text-white ">Buy Now</button>
+                    </div>
+                </div>
+                <div class="border-2 spacey-3 p-3 rounded-xl cursor-pointer hover:scale-105  transition-transform duration-300 transform origin-center ">
+                    <div class="w-full flex justify-center">
+                        <img class="w-72 h-56" src="images/lenovo-ideapad.webp" alt="">
+                    </div>
+                    <h3 class="text-center text-lg font-bold mb-2">Lenovo ideapad AMD Athlon™ Gold 7220U</h3>
+                    <p class="text-center font-semibold mb-2">45000 tk</p>
+                    <div class="flex gap-2 justify-center">
+                        <button class="btn bg-slate-500 text-white ">Compare</button>
+                        <button class="btn bg-green-500 text-white ">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Smart Watch section -->
+        <section class="my-8">
+            <h1 class="text-3xl text-center font-bold p-3 bg-slate-100 mb-8 rounded-xl cursor-pointer hover:scale-105  transition-transform duration-300 transform origin-center">Smart Watches</h1>
+            <div class="grid grid-cols-4 gap-4">
+                <!-- card -->
+                <div class="border-2 spacey-3 p-3 rounded-xl cursor-pointer hover:scale-105  transition-transform duration-300 transform origin-center">
+                    <div class="w-full flex justify-center">
+                        <img class=" h-56" src="images/apple-watch-ser-9.jpg" alt="">
+                    </div>
+                    <h3 class="text-center text-lg font-bold mb-2">Apple watch series-9</h3>
+                    <p class="text-center font-semibold mb-2">55000 tk</p>
+                    <div class="flex gap-2 justify-center">
+                        <button class="btn bg-slate-500 text-white ">Compare</button>
+                        <button class="btn bg-green-500 text-white ">Buy Now</button>
+                    </div>
+                </div>
+                <div class="border-2 spacey-3 p-3 rounded-xl cursor-pointer hover:scale-105  transition-transform duration-300 transform origin-center">
+                    <div class="w-full flex justify-center">
+                        <img class=" h-56" src="images/amazfit-t-rex-pro.jpg" alt="">
+                    </div>
+                    <h3 class="text-center text-lg font-bold mb-2">Amazfit T-rex pro</h3>
+                    <p class="text-center font-semibold mb-2">14300 tk</p>
+                    <div class="flex gap-2 justify-center">
+                        <button class="btn bg-slate-500 text-white ">Compare</button>
+                        <button class="btn bg-green-500 text-white ">Buy Now</button>
+                    </div>
+                </div>
+                <div class="border-2 spacey-3 p-3 rounded-xl cursor-pointer hover:scale-105  transition-transform duration-300 transform origin-center">
+                    <div class="w-full flex justify-center">
+                        <img class=" h-56" src="images/sasung_Watch6.avif" alt="">
+                    </div>
+                    <h3 class="text-center text-lg font-bold mb-2">Samsung watch 6</h3>
+                    <p class="text-center font-semibold mb-2">25000 tk</p>
+                    <div class="flex gap-2 justify-center">
+                        <button class="btn bg-slate-500 text-white ">Compare</button>
+                        <button class="btn bg-green-500 text-white ">Buy Now</button>
+                    </div>
+                </div>
+                <div class="border-2 spacey-3 p-3 rounded-xl cursor-pointer hover:scale-105  transition-transform duration-300 transform origin-center ">
+                    <div class="w-full flex justify-center">
+                        <img class=" h-56" src="images/mibro-x1-smart-watch-2.jpg" alt="">
+                    </div>
+                    <h3 class="text-center text-lg font-bold mb-2">Xiaomi Mibro watch 2</h3>
+                    <p class="text-center font-semibold mb-2">15000 tk</p>
+                    <div class="flex gap-2 justify-center">
+                        <button class="btn bg-slate-500 text-white ">Compare</button>
+                        <button class="btn bg-green-500 text-white ">Buy Now</button>
+                    </div>
+                </div>
+                <!-- second row -->
+                <div class="border-2 spacey-3 p-3 rounded-xl cursor-pointer hover:scale-105  transition-transform duration-300 transform origin-center">
+                    <div class="w-full flex justify-center">
+                        <img class=" h-56" src="images/apple-watch-ser-9.jpg" alt="">
+                    </div>
+                    <h3 class="text-center text-lg font-bold mb-2">Apple watch series-9</h3>
+                    <p class="text-center font-semibold mb-2">55000 tk</p>
+                    <div class="flex gap-2 justify-center">
+                        <button class="btn bg-slate-500 text-white ">Compare</button>
+                        <button class="btn bg-green-500 text-white ">Buy Now</button>
+                    </div>
+                </div>
+                <div class="border-2 spacey-3 p-3 rounded-xl cursor-pointer hover:scale-105  transition-transform duration-300 transform origin-center">
+                    <div class="w-full flex justify-center">
+                        <img class=" h-56" src="images/amazfit-t-rex-pro.jpg" alt="">
+                    </div>
+                    <h3 class="text-center text-lg font-bold mb-2">Amazfit T-rex pro</h3>
+                    <p class="text-center font-semibold mb-2">14300 tk</p>
+                    <div class="flex gap-2 justify-center">
+                        <button class="btn bg-slate-500 text-white ">Compare</button>
+                        <button class="btn bg-green-500 text-white ">Buy Now</button>
+                    </div>
+                </div>
+                <div class="border-2 spacey-3 p-3 rounded-xl cursor-pointer hover:scale-105  transition-transform duration-300 transform origin-center">
+                    <div class="w-full flex justify-center">
+                        <img class=" h-56" src="images/sasung_Watch6.avif" alt="">
+                    </div>
+                    <h3 class="text-center text-lg font-bold mb-2">Samsung watch 6</h3>
+                    <p class="text-center font-semibold mb-2">25000 tk</p>
+                    <div class="flex gap-2 justify-center">
+                        <button class="btn bg-slate-500 text-white ">Compare</button>
+                        <button class="btn bg-green-500 text-white ">Buy Now</button>
+                    </div>
+                </div>
+                <div class="border-2 spacey-3 p-3 rounded-xl cursor-pointer hover:scale-105  transition-transform duration-300 transform origin-center ">
+                    <div class="w-full flex justify-center">
+                        <img class="h-56" src="images/mibro-x1-smart-watch-2.jpg" alt="">
+                    </div>
+                    <h3 class="text-center text-lg font-bold mb-2">Xiaomi Mibro watch 2</h3>
+                    <p class="text-center font-semibold mb-2">15000 tk</p>
+                    <div class="flex gap-2 justify-center">
+                        <button class="btn bg-slate-500 text-white ">Compare</button>
+                        <button class="btn bg-green-500 text-white ">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script src="scripts/index.js"></script>
+</body>
+</html>
