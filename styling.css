@@ -1,0 +1,63 @@
+body {
+  margin-top: 20px;
+  position: relative;
+}
+
+img {
+  height: 400px;
+  width: auto;
+}
+
+.watch {
+  margin-left: 40px;
+}
+
+.details {
+  position: absolute;
+  top: 0;
+  left: 500px;
+  padding: 10px;
+}
+
+button {
+  background-color: rgb(241, 126, 35);
+  border: none;
+  padding: 10px 25px;
+  text-align: center;
+  font-size: 15px;
+  border-radius: 10px;
+}
+
+a {
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+
+select {
+  padding: 10px 25px;
+  background-color: rgb(255, 178, 127);
+  border: none;
+  border-radius: 10px;
+}
+
+a:hover {
+  color: black;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  display: inline;
+
+}
+
+h3 {
+  font-family: "Bitter", sans-serif;
+}
+
+p,
+li {
+  font-family: "Lora", sans-serif;
+  font-size: 20px;
+  line-height: 25px;
+}
