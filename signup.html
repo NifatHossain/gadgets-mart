@@ -11,17 +11,17 @@
               <button type = "button" class="toggle-btn" onclick = "register()">Register</button>
             </div>
             <form id = "login" class = "input-group">
-                <input type = "text" class = "input-field" placeholder = "User ID" required>
-                <input type = "text" class = "input-field" placeholder = "Enter Password" required>
-                <input type = "checkbox" class = "check-box"><span>Remember Password</span>
-                <button type = "submit" class="submit-btn">Login</button>
+                <input type = "text" class = "input-field" id="logInEmail" placeholder = "Enter email" required>
+                <input type = "text" class = "input-field" id="logInPassword" placeholder = "Enter Password" required>
+                <!-- <input type = "checkbox" class = "check-box"><span>Remember Password</span> -->
+                <button onclick="handleLogin()" type = "button" class="submit-btn">Login</button>
             </form>
             <form id = "register" class = "input-group" method="POST">
-                <input type = "text" class = "input-field" name="name" placeholder = "User Name" required>
-                <input type = "email" class = "input-field" name="email" placeholder = "Email" required>
-                <input type = "password" class = "input-field" name="password" placeholder = "Enter Password" required>
-                <input type = "checkbox" class = "check-box"><span>I agree to the terms and condition</span>
-                <button type = "submit" class="submit-btn">Register</button>
+                <input type = "text" class = "input-field" name="name" id="registerName" placeholder = "User Name" required>
+                <input type = "email" class = "input-field" name="email" id="registerEmail" placeholder = "Email" required>
+                <input type = "password" class = "input-field" name="password" id="registerPassword" placeholder = "Enter Password" required>
+                <input type = "checkbox" class = "check-box" id="ckbox" required><span>I agree to the terms and condition</span>
+                <button onclick="handleRegister()" type = "submit" class="submit-btn">Register</button>
             </form>
         </div>
     </div>  
@@ -46,6 +46,7 @@
         }
 
       </script>
+      <script src="scripts/script.js"></script>
 
 </body>
 </html>
