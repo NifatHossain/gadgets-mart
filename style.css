@@ -118,3 +118,9 @@ span
 {
     left: 450px;
 }
+
+.adminLink{
+    font-size: small;
+    margin-top: 10px;
+    color: blue;
+}

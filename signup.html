@@ -1,6 +1,12 @@
 <head>
     <title>Login and Registration form</title>
     <link rel = "stylesheet" href="style.css">
+    <script>
+        if(window.localStorage.getItem('user_info')){
+            window.location.href = 'index.html';
+            alert('you already Loged in')
+        }
+    </script>
 </head>
 <body>
     <div class = "project">
@@ -12,9 +18,9 @@
             </div>
             <form id = "login" class = "input-group">
                 <input type = "text" class = "input-field" id="logInEmail" placeholder = "Enter email" required>
-                <input type = "text" class = "input-field" id="logInPassword" placeholder = "Enter Password" required>
-                <!-- <input type = "checkbox" class = "check-box"><span>Remember Password</span> -->
-                <button onclick="handleLogin()" type = "button" class="submit-btn">Login</button>
+                <input type = "text" class = "input-field" id="logInPassword" placeholder = "Enter Password" required> <p>   .</p>
+                <button onclick="handleLogin()" type = "button" class="submit-btn">Login</button> <br>
+                <a href="adminLogin.html" class="adminLink">Admin Login?</a>
             </form>
             <form id = "register" class = "input-group" method="POST">
                 <input type = "text" class = "input-field" name="name" id="registerName" placeholder = "User Name" required>

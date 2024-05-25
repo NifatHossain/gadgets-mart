@@ -39,7 +39,7 @@
                 <input class="p-3 rounded-md border w-full" type="text" name="" id="productBrand" placeholder="Enter Product Brand">
             </div>
             <div class="flex items-center justify-center gap-5">
-                <input class="p-3 rounded-md border w-full" type="text" name="" id="productImage" placeholder="Enter Product image URL">
+                <input class="p-3 rounded-md border w-full" type="text" name="" id="productImage" placeholder="Enter image URL(Aspect Ratio must be 5:4)">
             </div>
 
             <div class="flex items-center justify-center gap-5">
@@ -67,8 +67,9 @@
                 <input class="p-3 rounded-md border w-full" type="text" name="" id="battery" placeholder="Enter rear battery details">
                 <input class="p-3 rounded-md border w-full" type="text" name="" id="sensors" placeholder="Enter sensor details">
             </div>
-            <button class="p-3  text-white font-bold text-lg btn-grad hover:btn-grad:hover">Add Item</button>
+            <button onclick="handleAddNewPhone()" class="p-3  text-white font-bold text-lg btn-grad hover:btn-grad:hover">Add Item</button>
         </form>
     </div>
+    <script src="scripts/script.js"></script>
 </body>
 </html>
