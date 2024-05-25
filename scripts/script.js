@@ -52,12 +52,64 @@ const validateUser=async(email,pass)=>{
         })
         .then(res=>{
             console.log('response: ', res)
-        })
+        });
+        window.localStorage.setItem('user_info',JSON.stringify(data[0]));
         window.location.href = 'index.html';
-        
+        alert('Login Successful')
     }
     else{
         alert('Wrong email or Password');
     }
 
+}
+//Admin Login
+const handleAdminLogIn=()=>{
+    const email= document.getElementById('adminEmail').value
+    const password= document.getElementById('password').value
+    validateAdmin(email,password)
+}
+//Verify Admin
+const validateAdmin=async(email,password)=>{
+    const response= await fetch(`http://localhost:3000/admins/${email}`);
+    const data= await response.json();
+    console.log(data)
+    if(data.length>0 && data[0].password==password){
+       if(window.localStorage.getItem('user_info')){
+        window.localStorage.removeItem('user_info')
+       }
+       window.localStorage.setItem('user_info',JSON.stringify(data[0]))
+       alert('Login Successful')
+       window.location.href='index.html';
+    }
+}
+
+
+
+const handleLogOut=()=>{
+    window.localStorage.removeItem('user_info');
+    alert('Logout successfull')
+    window.location.href='index.html';
+}
+//Adding New Phone
+const handleAddNewPhone=()=>{
+    const productModel= document.getElementById('productModel').value
+    const productBrand= document.getElementById('productBrand').value
+    const productImage= document.getElementById('productImage').value
+    const network= document.getElementById('network').value
+    const sim= document.getElementById('sim').value
+    const displayType= document.getElementById('displayType').value
+    const displaySize= document.getElementById('displaySize').value
+    const displayResolution= document.getElementById('displayResolution').value
+    const os= document.getElementById('os').value
+    const chipset= document.getElementById('chipset').value
+    const memory= document.getElementById('memory').value
+    const rearCamera= document.getElementById('rearCamera').value
+    const selfieCamera= document.getElementById('selfieCamera').value
+    const battery= document.getElementById('battery').value
+    const sensors= document.getElementById('sensors').value
+
+
+    const phoneData={productModel,productBrand,productImage,network,sim,displayType,displaySize,displayResolution,os,chipset,memory,rearCamera,selfieCamera,battery,sensors}
+    
+    fetch('/addnewphone')
 }
