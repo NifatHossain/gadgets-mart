@@ -8,11 +8,15 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.1/dist/full.min.css" rel="stylesheet" type="text/css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
-    
+    <script>
+        const data=localStorage.getItem('user_info')
+        const adminEmail=JSON.parse(data).email; 
+        console.log(adminEmail)
+    </script>
 </head>
 <body class="max-w-7xl mx-auto p-2 md:p-0">
     <header>
-        <nav>
+        <nav class="">
             <div class="navbar bg-base-100">
                 <div class="navbar-start">
                   <div class="dropdown">
@@ -24,6 +28,13 @@
                       <li><a>mobile</a></li>
                       <li><a>laptop</a></li>
                       <li><a>others</a></li>
+                      <li  class="relative z-50 hidden" id="addNewBtn2">
+                        <a>Add product</a>
+                        <ul class="p-2">
+                          <li><a>Submenu 1</a></li>
+                          <li><a>Submenu 2</a></li>
+                        </ul>
+                      </li>
                     </ul>
                   </div>
                   <a class="btn btn-ghost text-xl font-bold">Gadgets Mart</a>
@@ -34,6 +45,15 @@
                     <li><a>mobile</a></li>
                     <li><a>laptop</a></li>
                     <li><a>others</a></li>
+                    <li class="relative z-50 hidden" id="addNewBtn" >
+                        <details>
+                          <summary>Add Product</summary>
+                          <ul class="p-2">
+                            <li><a>Submenu</a></li>
+                            <li><a>Submenu 2</a></li>
+                          </ul>
+                        </details>
+                      </li>
                   </ul>
                 </div>
                 <div class="navbar-end">
@@ -43,7 +63,7 @@
               </div>
         </nap-3 rounded-xlv>
     </header>
-    <main>
+    <main class="">
         
 <!-- Carousel -->
 <div id="default-carousel" class="relative w-full " data-carousel="slide">
@@ -490,6 +510,15 @@
         }
         else{
             document.getElementById('logOutBtn').classList.replace('block','hidden')
+        }
+        if(JSON.parse(localStorage.getItem('user_info'))?.admin_id){
+            console.log(JSON.parse(localStorage.getItem('user_info'))?.admin_id)
+            document.getElementById('addNewBtn').classList.replace('hidden','block')
+            document.getElementById('addNewBtn2').classList.replace('hidden','block')
+        }
+        else{
+            document.getElementById('addNewBtn').classList.replace('block','hidden')
+            document.getElementById('addNewBtn2').classList.replace('block','hidden')
         }
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>

@@ -107,9 +107,25 @@ const handleAddNewPhone=()=>{
     const selfieCamera= document.getElementById('selfieCamera').value
     const battery= document.getElementById('battery').value
     const sensors= document.getElementById('sensors').value
+    const admindData=localStorage.getItem('user_info')
+    const adminEmail=JSON.parse(admindData).email; 
 
 
-    const phoneData={productModel,productBrand,productImage,network,sim,displayType,displaySize,displayResolution,os,chipset,memory,rearCamera,selfieCamera,battery,sensors}
+    const phoneData={productModel,productBrand,productImage,network,sim,displayType,displaySize,displayResolution,os,chipset,memory,rearCamera,selfieCamera,battery,sensors,adminEmail}
     
-    fetch('/addnewphone')
+    fetch('http://localhost:3000/addnewphone', {
+        method: "POST",
+        headers: {'Content-Type': 'application/json'}, 
+        body: JSON.stringify(phoneData)
+    })
+    .then(res=>{
+        console.log('response: ', res)
+        if(res.status==200){
+            alert('Registered successfully')
+            setTimeout(()=>{
+                window.location.href = 'index.html'
+            },0)
+            
+        }
+    })
 }
