@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.1/dist/full.min.css" rel="stylesheet" type="text/css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
-
+    
 </head>
 <body class="max-w-7xl mx-auto p-2 md:p-0">
     <header>
@@ -37,7 +37,8 @@
                   </ul>
                 </div>
                 <div class="navbar-end">
-                  <a class="btn" href="signup.html">Login</a>
+                  <a class="btn mr-3 bg-green-400 text-white" href="signup.html">Login</a>
+                  <button onclick="handleLogOut()" class="btn bg-red-400 text-white hidden" id="logOutBtn" >Log Out</button>
                 </div>
               </div>
         </nap-3 rounded-xlv>
@@ -173,7 +174,7 @@
                     <p class="text-center font-semibold mb-2">220000 tk</p>
                     <div class="flex gap-2 justify-center">
                         <button class="btn bg-slate-500 text-white ">Compare</button>
-                        <button class="btn bg-green-500 text-white ">Buy Now</button>
+                        <a href="mobile.html"><button class="btn bg-green-500 text-white ">Buy Now</button></a>
                     </div>
                 </div>
                 <div class="border-2 spacey-3 p-3 rounded-xl cursor-pointer hover:scale-105  transition-transform duration-300 transform origin-center">
@@ -184,7 +185,7 @@
                     <p class="text-center font-semibold mb-2">154000 tk</p>
                     <div class="flex gap-2 justify-center">
                         <button class="btn bg-slate-500 text-white ">Compare</button>
-                        <button class="btn bg-green-500 text-white ">Buy Now</button>
+                        <a href="mobile.html"><button class="btn bg-green-500 text-white ">Buy Now</button></a>
                     </div>
                 </div>
                 <div class="border-2 spacey-3 p-3 rounded-xl cursor-pointer hover:scale-105  transition-transform duration-300 transform origin-center">
@@ -269,7 +270,7 @@
                     <p class="text-center font-semibold mb-2">89000 tk</p>
                     <div class="flex gap-2 justify-center">
                         <button class="btn bg-slate-500 text-white ">Compare</button>
-                        <button class="btn bg-green-500 text-white ">Buy Now</button>
+                        <a href="laptop.html"><button class="btn bg-green-500 text-white ">Buy Now</button></a>
                     </div>
                 </div>
                 <div class="border-2 spacey-3 p-3 rounded-xl cursor-pointer hover:scale-105  transition-transform duration-300 transform origin-center">
@@ -280,7 +281,7 @@
                     <p class="text-center font-semibold mb-2">69800 tk</p>
                     <div class="flex gap-2 justify-center">
                         <button class="btn bg-slate-500 text-white ">Compare</button>
-                        <button class="btn bg-green-500 text-white ">Buy Now</button>
+                        <a href="laptop.html"><button class="btn bg-green-500 text-white ">Buy Now</button></a>
                     </div>
                 </div>
                 <div class="border-2 spacey-3 p-3 rounded-xl cursor-pointer hover:scale-105  transition-transform duration-300 transform origin-center">
@@ -365,7 +366,7 @@
                     <p class="text-center font-semibold mb-2">55000 tk</p>
                     <div class="flex gap-2 justify-center">
                         <button class="btn bg-slate-500 text-white ">Compare</button>
-                        <button class="btn bg-green-500 text-white ">Buy Now</button>
+                        <a href="watch.html"><button class="btn bg-green-500 text-white ">Buy Now</button></a>
                     </div>
                 </div>
                 <div class="border-2 spacey-3 p-3 rounded-xl cursor-pointer hover:scale-105  transition-transform duration-300 transform origin-center">
@@ -376,7 +377,7 @@
                     <p class="text-center font-semibold mb-2">14300 tk</p>
                     <div class="flex gap-2 justify-center">
                         <button class="btn bg-slate-500 text-white ">Compare</button>
-                        <button class="btn bg-green-500 text-white ">Buy Now</button>
+                        <a href="watch.html"><button class="btn bg-green-500 text-white ">Buy Now</button></a>
                     </div>
                 </div>
                 <div class="border-2 spacey-3 p-3 rounded-xl cursor-pointer hover:scale-105  transition-transform duration-300 transform origin-center">
@@ -483,7 +484,15 @@
           </fieldset>
         </form>
       </footer>
+      <script>
+        if(window.localStorage.getItem('user_info')){
+            document.getElementById('logOutBtn').classList.replace('hidden','block')
+        }
+        else{
+            document.getElementById('logOutBtn').classList.replace('block','hidden')
+        }
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-    <script src="scripts/index.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
 </html>
