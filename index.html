@@ -24,10 +24,11 @@
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </div>
                     <ul tabindex="0" class="menu bg-white text-black  font-semibold text-lg menu-sm dropdown-content mt-3 z-[1] p-2 shadow  rounded-box w-52">
-                      <li><a>Home</a></li>
+                      <li><a href="index.html">Home</a></li>
                       <li><a>mobile</a></li>
                       <li><a>laptop</a></li>
-                      <li><a>others</a></li>
+                      <li><a href="aboutUs.html.html">About</a></li>
+                      <li><a href="cart.html">Cartt</a></li>
                       <li  class="relative z-50 hidden" id="addNewBtn2">
                         <a>Add product</a>
                         <ul class="p-2">
@@ -42,10 +43,11 @@
                 </div>
                 <div class="navbar-center hidden lg:flex">
                   <ul class="menu font-semibold text-lg menu-horizontal px-1">
-                    <li><a>Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a>mobile</a></li>
                     <li><a>laptop</a></li>
-                    <li><a>others</a></li>
+                    <li><a href="aboutUs.html.html">About</a></li>
+                    <li><a href="cart.html">Cart</a></li>
                     <li class="relative z-50 hidden" id="addNewBtn" >
                         <details>
                           <summary>Add Product</summary>
@@ -186,9 +188,10 @@
         <!-- Phone Section -->
         <section class="my-8">
             <h1 class="text-3xl text-center font-bold p-3 bg-slate-100 mb-8 rounded-xl">Phones</h1>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div id="phoneSection" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <!-- card -->
-                <div class="border-2 spacey-3 p-3 rounded-xl cursor-pointer hover:scale-105  transition-transform duration-300 transform origin-center">
+                
+                <!-- <div class="border-2 spacey-3 p-3 rounded-xl cursor-pointer hover:scale-105  transition-transform duration-300 transform origin-center">
                     <div class="w-full flex justify-center">
                         <img class="w-72 h-56" src="images/s23.webp" alt="">
                     </div>
@@ -233,7 +236,7 @@
                     </div>
                 </div>
                 <!-- second row -->
-                <div class="border-2 spacey-3 p-3 rounded-xl cursor-pointer hover:scale-105  transition-transform duration-300 transform origin-center">
+                <!-- <div class="border-2 spacey-3 p-3 rounded-xl cursor-pointer hover:scale-105  transition-transform duration-300 transform origin-center">
                     <div class="w-full flex justify-center">
                         <img class="w-72 h-56" src="images/A71.webp" alt="">
                     </div>
@@ -276,7 +279,7 @@
                         <button class="btn bg-slate-500 text-white ">Compare</button>
                         <button class="btn bg-green-500 text-white ">Buy Now</button>
                     </div>
-                </div>
+                </div>  -->
             </div>
         </section>
         <!-- Laptop section -->
@@ -525,5 +528,8 @@
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     <script src="scripts/script.js"></script>
+    <script>
+        showPhoneData()
+    </script>
 </body>
 </html>
