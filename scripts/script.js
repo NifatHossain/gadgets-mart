@@ -212,37 +212,91 @@ const handleBuyNow=(phoneData)=>{
         if(cartData){
             // window.localStorage.removeItem('carts');
             parsedCartData= JSON.parse(cartData);
-            cartArray.push(parsedCartData);
-            cartArray.push(phoneData)
+            // cartArray.push(parsedCartData);
+            // cartArray.push(phoneData)
+            parsedCartData.push(phoneData);
+            window.localStorage.setItem('carts', JSON.stringify(parsedCartData))
         }
         else{
             cartArray.push(phoneData)
+            window.localStorage.setItem('carts', JSON.stringify(cartArray))
         }
-        window.localStorage.setItem('carts', JSON.stringify(cartArray))
+        
         alert('Product Added To carts')
-        window.location.url='index.html'
+        setTimeout(()=>{
+            window.location.href = 'index.html'
+        },0)
     }
 
 }
 
 const showCartTable=()=>{
     const cartItems=localStorage.getItem('carts')
-    const parsedCartItems= JSON.parse(cartItems)
-    const rows=document.getElementById('cartTableRow')
-    parsedCartItems.map(item=>{
-        const row=document.createElement('tr')
-        row.innerHTML=`
-            <tr class="hover">
-                <th>${item.id}</th>
-                <td>${item.productModel}</td>
-                <td>${item.productPrice}</td>
-                <td>pending</td>
-            </tr>
-        `
-        rows.appendChild(row)
+    if(!cartItems){
+        alert('Your cart is empty!! First add something into cart')
+        return setTimeout(()=>{
+                    window.location.href = 'index.html'
+                },0)
+    }
+    else{
+        const parsedCartItems= JSON.parse(cartItems)
+        const rows=document.getElementById('cartTableRow')
+        parsedCartItems.map(item=>{
+            const row=document.createElement('tr')
+            row.innerHTML=`
+                <tr class="hover">
+                    <th>${item.id}</th>
+                    <td>${item.productModel}</td>
+                    <td>${item.productPrice}</td>
+                    <td>pending</td>
+                </tr>
+            `
+            rows.appendChild(row)
 
-    })
-    
+        })
+    }
     
 }
 
+const handleConfirmOrder=()=>{
+    const cartItems=localStorage.getItem('carts')
+    const parsedCartItems= JSON.parse(cartItems)
+    parsedCartItems.map(item=>{
+        const productId=item?.id;
+        const productBrand= item?.productBrand;
+        const productModel= item?.productModel
+        const productPrice= item?.productPrice;
+        const userData= localStorage.getItem('user_info')
+        const userEmail= JSON.parse(userData).email;
+        const orderInfo= {productId,productBrand,productModel,productPrice,userEmail}
+        // console.log(orderInfo)
+        fetch('http://localhost:3000/allOrders', {
+            method: "POST",
+            headers: {'Content-Type': 'application/json'}, 
+            body: JSON.stringify(orderInfo)
+        })
+        .then(res=>{
+            console.log('response: ', res)
+            if(res.status==200){
+                localStorage.removeItem('carts')
+                alert('Ordered successfully')
+                setTimeout(()=>{
+                    window.location.href = 'index.html'
+                },0)
+                
+            }
+        })
+    })
+}
+const handleResetCart=()=>{
+    const cartItems=localStorage.getItem('carts')
+    if(cartItems){
+        localStorage.removeItem('carts');
+        alert('your cart is now Empty')
+        window.location.href='cart.html';
+    }
+    else{
+        alert('Nothing in your cart')
+    }
+
+}

@@ -9,12 +9,15 @@
     
 </head>
 <body>
-    <div class="overflow-x-auto max-w-2xl mx-auto">
+    <div class="bg-slate-50 h-screen">
+    <div class="overflow-x-auto max-w-4xl mx-auto h-screen my-auto bg-slate-100">
+      <a href="index.html"><button class="bg-slate-400 text-white p-3 rounded-md mt-4">return Home</button></a>
+      <h1 class="text-3xl font-semibold text-center my-5 bg-white w-72 p-3 mx-auto">Shopping Cart</h1>
         <table class="table" >
           <!-- head -->
           <thead>
             <tr class="hover">
-              <th></th>
+              <th>Product id</th>
               <th>Name</th>
               <th>Price</th>
               <th>Status</th>
@@ -28,23 +31,15 @@
               <td>Quality Control Specialist</td>
               <td>Blue</td>
             </tr> -->
-            <!-- row 2 -->
-            <!-- <tr class="hover">
-              <th>2</th>
-              <td>Hart Hagerty</td>
-              <td>Desktop Support Technician</td>
-              <td>Purple</td>
-            </tr> -->
-            <!-- row 3 -->
-            <!-- <tr class="hover">
-              <th>3</th>
-              <td>Brice Swyre</td>
-              <td>Tax Accountant</td>
-              <td>Red</td>
-            </tr> -->
+            
           </tbody>
         </table>
-      </div>
+        <div class="flex gap-5 justify-center">
+          <button onclick="handleConfirmOrder()" class="bg-green-500 text-white font-semibold p-3 rounded-md my-4">confirm Orders</button>
+          <button onclick="handleResetCart()" class="bg-red-500 text-white font-semibold p-3 rounded-md my-4">Reset Cart</button>
+        </div>
+    </div>
+    </div>
       <script src="scripts/script.js"></script>
       <script>
         showCartTable()
