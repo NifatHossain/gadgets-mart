@@ -88,7 +88,8 @@ const validateAdmin=async(email,password)=>{
 
 
 const handleLogOut=()=>{
-    window.localStorage.removeItem('user_info');
+    // window.localStorage.removeItem('user_info');
+    window.localStorage.clear();
     alert('Logout successfull')
     window.location.href='index.html';
 }
@@ -163,5 +164,85 @@ const showPhoneData=async()=>{
     
     
 }
+//Show single phone's details
+const showPhoneDetails=async(id)=>{
+    const response= await fetch(`http://localhost:3000/allphones/${id}`)
+    const data= await response.json();
+    document.getElementById('phoneDetails').innerHTML=`
+    <img
+        src=${data[0].productImage}
+        alt="iphone 15 pro max"
+      />
+      <div class="details">
+        <p><span class="titleFont">Brand: </span>${data[0].productBrand}</p>
+        <p><span class="titleFont">Model: </span>${data[0].productModel}</p>
+        <p><span class="titleFont">Network: </span>${data[0].network}</p>
+        <p><span class="titleFont">SIM: </span>${data[0].sim}</p>
+        <p><span class="titleFont">Display Type: </span>${data[0].displayType}</p>
+        <p><span class="titleFont">Display Size: </span>${data[0].displaySize}</p>
+        <p><span class="titleFont">Display Resolution: </span>${data[0].displayResolution}</p>
+        <p><span class="titleFont">OS: </span>${data[0].os}</p>
+        <p><span class="titleFont">Chipset: </span>${data[0].chipset}</p>
+        <p><span class="titleFont">Memory: </span>${data[0].memory}</p>
+        <p><span class="titleFont">Main Camera: </span>${data[0].rearCamera}</p>
+        <p><span class="titleFont">Selfie Camera: </span>${data[0].selfieCamera}</p>
+        <p><span class="titleFont">Battery Info: </span>${data[0].battery}</p>
+        <p><span class="titleFont">Sensors: </span>${data[0].sensors}</p>
 
+        <div>
+            <button  onclick='handleBuyNow(${JSON.stringify(data[0])})'>Buy Now</button>
+            <a href="index.html"><button  style="background-color: rgb(100 116 139)">Return Home</button></a>
+        </div>
+        
+    </div>
+
+    `
+
+}
+const handleBuyNow=(phoneData)=>{
+    console.log(phoneData)
+    const currentUser= localStorage.getItem('user_info')
+    if(!currentUser){
+        alert('You Must login first')
+        window.location.url='signup.html'
+    }
+    else{
+        var cartData= localStorage.getItem('carts')
+        var cartArray=[]
+        if(cartData){
+            // window.localStorage.removeItem('carts');
+            parsedCartData= JSON.parse(cartData);
+            cartArray.push(parsedCartData);
+            cartArray.push(phoneData)
+        }
+        else{
+            cartArray.push(phoneData)
+        }
+        window.localStorage.setItem('carts', JSON.stringify(cartArray))
+        alert('Product Added To carts')
+        window.location.url='index.html'
+    }
+
+}
+
+const showCartTable=()=>{
+    const cartItems=localStorage.getItem('carts')
+    const parsedCartItems= JSON.parse(cartItems)
+    const rows=document.getElementById('cartTableRow')
+    parsedCartItems.map(item=>{
+        const row=document.createElement('tr')
+        row.innerHTML=`
+            <tr class="hover">
+                <th>${item.id}</th>
+                <td>${item.productModel}</td>
+                <td>${item.productPrice}</td>
+                <td>pending</td>
+            </tr>
+        `
+        rows.appendChild(row)
+
+    })
+    
+    
+}
 
