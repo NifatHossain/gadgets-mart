@@ -73,6 +73,17 @@
   <script>
     const searchParams = new URLSearchParams(window.location.search);
     const reqId=(searchParams.get('id')); // price_descending
-     showPhoneDetails(reqId);
+    showPhoneDetails(reqId);
+  </script>
+  <script>
+    if(JSON.parse(localStorage.getItem('user_info'))?.admin_id){
+        console.log(JSON.parse(localStorage.getItem('user_info'))?.admin_id);
+        // document.getElementById('deleteBtn').style.visibility = 'visible';
+        document.getElementById('deleteBtn').classList.replace('hiddens','blocks')
+    }
+    else{
+      document.getElementById('deleteBtn').classList.replace('blocks','hiddens')
+      // document.getElementById('deleteBtn').style.visibility = 'hidden';
+    }
   </script>
 </html>
