@@ -74,3 +74,10 @@ li {
 .titleFont{
   font-weight: 600;
 }
+
+.hiddens{
+  visibility: hidden;
+}
+.blocks{
+  visibility: visible;
+}
