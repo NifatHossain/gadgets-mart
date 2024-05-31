@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mobile</title>
+
+    <!-- css link -->
+    <link rel="stylesheet" href="styling.css" />
+    <!-- Roboto -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Oranienbaum&family=Port+Lligat+Sans&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bitter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Oranienbaum&family=Port+Lligat+Sans&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Lora -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Caveat:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400..700&family=Oranienbaum&family=Port+Lligat+Sans&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div  style="text-align: center; padding-top: 8px; padding-bottom: 8px; background-color: rgb(243 244 246)">
+        <h2>Explore Specification</h2>
+    </div>
+    <div class="parent" id="phoneDetails" style="padding: 20px;">
+      <!-- <img
+        src=${data[0].productImage}
+        alt="iphone 15 pro max"
+      />
+      <div class="details">
+        <p><span class="titleFont">Brand: </span>${data[0].productBrand}</p>
+        <p><span class="titleFont">Model: </span>${data[0].productModel}</p>
+        <p><span class="titleFont">Network: </span>${data[0].network}</p>
+        <p><span class="titleFont">SIM: </span>${data[0].sim}</p>
+        <p><span class="titleFont">Display Type: </span>${data[0].displayType}</p>
+        <p><span class="titleFont">Display Size: </span>${data[0].displaySize}</p>
+        <p><span class="titleFont">Display Resolution: </span>${data[0].displayResolution}</p>
+        <p><span class="titleFont">OS: </span>${data[0].os}</p>
+        <p><span class="titleFont">Chipset: </span>${data[0].chipset}</p>
+        <p><span class="titleFont">Memory: </span>${data[0].memory}</p>
+        <p><span class="titleFont">Main Camera: </span>${data[0].rearCamera}</p>
+        <p><span class="titleFont">Selfie Camera: </span>${data[0].selfieCamera}</p>
+        <p><span class="titleFont">Battery Info: </span>${data[0].battery}</p>
+        <p><span class="titleFont">Sensors: </span>${data[0].sensors}</p>
+        
+
+        <select name="quantity-select" id="qty-select">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+        <button type="submit"><a href="buynow.html">Buy Now</a></button>
+      </div> -->
+    </div>
+  </body>
+  <script src="scripts/script.js"></script>
+  <script>
+    const searchParams = new URLSearchParams(window.location.search);
+    const reqId=(searchParams.get('id')); // price_descending
+     showPhoneDetails(reqId);
+  </script>
+</html>
