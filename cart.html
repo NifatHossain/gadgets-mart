@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart summary</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+</head>
+<body>
+    <div class="bg-slate-50 h-screen">
+    <div class="overflow-x-auto max-w-4xl mx-auto h-screen my-auto bg-slate-100">
+      <a href="index.html"><button class="bg-slate-400 text-white p-3 rounded-md mt-4">return Home</button></a>
+      <h1 class="text-3xl font-semibold text-center my-5 bg-white w-72 p-3 mx-auto">Shopping Cart</h1>
+        <table class="table" >
+          <!-- head -->
+          <thead>
+            <tr class="hover">
+              <th>Product id</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="cartTableRow">
+            <!-- row 1 -->
+            <!-- <tr class="hover">
+              <th>1</th>
+              <td>Cy Ganderton</td>
+              <td>Quality Control Specialist</td>
+              <td>Blue</td>
+            </tr> -->
+            
+          </tbody>
+        </table>
+        <div class="flex gap-5 justify-center">
+          <button onclick="handleConfirmOrder()" class="bg-green-500 text-white font-semibold p-3 rounded-md my-4">confirm Orders</button>
+          <button onclick="handleResetCart()" class="bg-red-500 text-white font-semibold p-3 rounded-md my-4">Reset Cart</button>
+        </div>
+    </div>
+    </div>
+      <script src="scripts/script.js"></script>
+      <script>
+        showCartTable()
+      </script>
+</body>
+</html>
