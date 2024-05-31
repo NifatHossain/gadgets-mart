@@ -139,6 +139,52 @@ const handleAddNewPhone=()=>{
     })
 }
 
+//Adding New Laptop
+const handleAddNewLaptop=()=>{
+    const productModel= document.getElementById('productModel').value
+    const productBrand= document.getElementById('productBrand').value
+    const productImage= document.getElementById('productImage').value
+    const productPrice= document.getElementById('productPrice').value
+    const software= document.getElementById('software').value
+    const graphics= document.getElementById('graphics').value
+    const displayType= document.getElementById('displayType').value
+    const displaySize= document.getElementById('displaySize').value
+    const displayResolution= document.getElementById('displayResolution').value
+    const os= document.getElementById('os').value
+    const hdmi= document.getElementById('hdmi').value
+    const memory= document.getElementById('memory').value
+    const fingerprint= document.getElementById('fingerprint').value
+    const selfieCamera= document.getElementById('selfieCamera').value
+    const warranty= document.getElementById('warranty').value
+    const otherFeatures= document.getElementById('otherFeatures').value
+    const admindData= localStorage.getItem('user_info')
+    const adminEmail= JSON.parse(admindData).email; 
+
+
+    const laptopData={productModel,productBrand,productImage,productPrice,software,graphics,displayType,displaySize,displayResolution,os,hdmi,memory,fingerprint,selfieCamera,warranty,otherFeatures,adminEmail}
+    
+    fetch('http://localhost:3000/addnewlaptop', {
+        method: "POST",
+        headers: {'Content-Type': 'application/json'}, 
+        body: JSON.stringify(laptopData)
+    })
+    .then(res=>{
+        console.log('response: ', res)
+        alert('Added Data Successfully')
+        window.location.href ='index.html'
+
+        if(res.status==200){
+            // alert('Added Data Successfully')
+            // window.location.href ='index.html'
+            
+            
+        }
+        else{
+            console.log('something went wrong')
+        }
+    })
+}
+
 //Show all phones data in phones section of homepage
 const showPhoneData=async()=>{
     const response=await fetch('http://localhost:3000/allphones')
@@ -210,8 +256,31 @@ const showPhoneDetails=async(id)=>{
     </div>
 
     `
-
 }
+<<<<<<< HEAD
+
+//Show all laptops data in phones section of homepage
+const showLaptopData=async()=>{
+    const response=await fetch('http://localhost:3000/alllaptops')
+    const data= await response.json()
+    const phoneSection= document.getElementById('LaptopSection');
+    data.map(laptop=>{
+        const phoneCard= document.createElement('div');
+        phoneCard.innerHTML=`
+        <div class="border-2 spacey-3 p-3 rounded-xl cursor-pointer hover:scale-105  transition-transform duration-300 transform origin-center">
+            <div class="w-full flex justify-center">
+                <img class="w-72 h-56" src=${phone.productImage} alt="">
+            </div>
+            <h3 class="text-center text-lg font-bold mb-2">${phone.productModel}</h3>
+            <p class="text-center font-semibold mb-2">${phone.productPrice}</p>
+            <div class="flex gap-2 justify-center">
+                <button class="btn bg-slate-500 text-white ">Compare</button>
+                <a href="mobile.html?id=${phone.id}"><button class="btn bg-green-500 text-white ">Details</button></a>
+            </div>
+        </div>
+        `
+        phoneSection.appendChild(phoneCard);
+=======
 //delete  product code
 const handleDeleteProduct=(id)=>{
     fetch(`http://localhost:3000/deleteproduct/${id}`, {
@@ -248,10 +317,15 @@ const showWatchData=async()=>{
         </div>
         `
         watchSection.appendChild(watchCard);
+>>>>>>> 22cdb116d456885c9a33c5f6317ffcd107a82ce4
     })
     
     
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> 22cdb116d456885c9a33c5f6317ffcd107a82ce4
 const handleBuyNow=(phoneData)=>{
     console.log(phoneData)
     const currentUser= localStorage.getItem('user_info')
