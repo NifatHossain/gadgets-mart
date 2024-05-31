@@ -353,3 +353,46 @@ const handleResetCart=()=>{
     }
 
 }
+
+const handleAddNewWatch=()=>{ 
+    const productModel= document.getElementById('productModel').value
+    const productBrand= document.getElementById('productBrand').value 
+    const productImage= document.getElementById('productImage').value 
+    const productPrice= document.getElementById('productPrice').value 
+    const callingFeature= document.getElementById('callingFeature').value 
+    const chargingTime= document.getElementById('chargingTime').value 
+    const displayDetails= document.getElementById('displayDetails').value 
+    const waterProof= document.getElementById('waterProof').value 
+    const os= document.getElementById('os').value 
+    const sensors= document.getElementById('sensors').value 
+    const batteryLife= document.getElementById('batteryLife').value 
+    const features= document.getElementById('features').value 
+    const admindData= localStorage.getItem('user_info') 
+    const adminEmail= JSON.parse(admindData).email;  
+ 
+    const watchData={productModel,productBrand,productImage,productPrice,callingFeature,chargingTime,displayDetails,waterProof,batteryLife,os,features,sensors,adminEmail} 
+     
+    fetch('http://localhost:3000/addnewwatch', { 
+        method: "POST", 
+        headers: {'Content-Type': 'application/json'},  
+        body: JSON.stringify(watchData) 
+    }) 
+    .then(res=>{ 
+        console.log('response: ', res) 
+        alert('Added Data Successfully') 
+        window.location.href ='index.html' 
+ 
+        if(res.status==200){ 
+            alert('Added Data Successfully') 
+            // window.location.href ='index.html' 
+             
+             
+        } 
+        else{ 
+            console.log('something went wrong') 
+        } 
+    }) 
+} 
+
+//
+
