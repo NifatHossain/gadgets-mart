@@ -257,30 +257,31 @@ const showPhoneDetails=async(id)=>{
 
     `
 }
-<<<<<<< HEAD
 
 //Show all laptops data in phones section of homepage
 const showLaptopData=async()=>{
     const response=await fetch('http://localhost:3000/alllaptops')
     const data= await response.json()
-    const phoneSection= document.getElementById('LaptopSection');
+    const laptopSection= document.getElementById('laptopSection');
     data.map(laptop=>{
-        const phoneCard= document.createElement('div');
-        phoneCard.innerHTML=`
+        const laptopCard= document.createElement('div');
+        laptopCard.innerHTML=`
         <div class="border-2 spacey-3 p-3 rounded-xl cursor-pointer hover:scale-105  transition-transform duration-300 transform origin-center">
             <div class="w-full flex justify-center">
-                <img class="w-72 h-56" src=${phone.productImage} alt="">
+                <img class="w-72 h-56" src=${laptop.productImage} alt="">
             </div>
-            <h3 class="text-center text-lg font-bold mb-2">${phone.productModel}</h3>
-            <p class="text-center font-semibold mb-2">${phone.productPrice}</p>
+            <h3 class="text-center text-lg font-bold mb-2">${laptop.productModel}</h3>
+            <p class="text-center font-semibold mb-2">${laptop.productPrice}</p>
             <div class="flex gap-2 justify-center">
-                <button class="btn bg-slate-500 text-white ">Compare</button>
-                <a href="mobile.html?id=${phone.id}"><button class="btn bg-green-500 text-white ">Details</button></a>
+                <a href="laptop.html?id=${laptop.id}"><button class="btn bg-slate-500 text-white ">Details</button></a>
+                <button class="btn bg-green-500 text-white "  onclick='handleBuyNow(${JSON.stringify(laptop)})'>Buy Now</button>
             </div>
         </div>
         `
-        phoneSection.appendChild(phoneCard);
-=======
+        laptopSection.appendChild(laptopCard);
+
+    })
+}
 //delete  product code
 const handleDeleteProduct=(id)=>{
     fetch(`http://localhost:3000/deleteproduct/${id}`, {
@@ -311,21 +312,17 @@ const showWatchData=async()=>{
             <h3 class="text-center text-lg font-bold mb-2">${watch.productModel}</h3>
             <p class="text-center font-semibold mb-2">${watch.productPrice}</p>
             <div class="flex gap-2 justify-center">
-                <button class="btn bg-slate-500 text-white ">Compare</button>
-                <a href="watch.html?id=${watch.id}"><button class="btn bg-green-500 text-white ">Details</button></a>
+                <a href="watch.html?id=${watch.id}"><button class="btn bg-slate-500  text-white ">Details</button></a>
+                <button class="btn bg-green-500 text-white "  onclick='handleBuyNow(${JSON.stringify(watch)})'>Buy Now</button>
             </div>
         </div>
         `
         watchSection.appendChild(watchCard);
->>>>>>> 22cdb116d456885c9a33c5f6317ffcd107a82ce4
     })
     
     
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 22cdb116d456885c9a33c5f6317ffcd107a82ce4
 const handleBuyNow=(phoneData)=>{
     console.log(phoneData)
     const currentUser= localStorage.getItem('user_info')
@@ -468,5 +465,4 @@ const handleAddNewWatch=()=>{
     }) 
 } 
 
-//
 
