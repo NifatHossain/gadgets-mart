@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Laptop</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+                 
+        .btn-grad {
+            background-image: linear-gradient(to right, #1D976C 0%, #93F9B9  51%, #1D976C  100%);
+            margin: 10px;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            display: block;
+        }
+
+        .btn-grad:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+        }
+         
+    </style>
+</head>
+<body class="bg-slate-100 h-[100vh] pt-4 md:pt-7 pb-8">
+    <div class="max-w-3xl mx-auto">
+        <a href="index.html" class="btn">return home</a>
+    </div>
+    <h1 class="text-3xl text-center font-semibold border-x-8 bg-white p-3 max-w-3xl mx-auto my-4">Add New Product </h1>
+    <div class="max-w-3xl mx-auto mb-10">
+        <form class="flex flex-col gap-4">
+            <div class="flex items-center justify-center gap-5">
+                <input class="p-3 rounded-md border w-full" type="text" name="" id="productModel" placeholder="Enter Product Model">
+                <input class="p-3 rounded-md border w-full" type="text" name="" id="productBrand" placeholder="Enter Product Brand">
+            </div>
+            <div class="flex items-center justify-center gap-5">
+                <input class="p-3 rounded-md border w-full" type="text" name="" id="productImage" placeholder="Enter image URL(Aspect Ratio must be 1:1)">
+                <input class="p-3 rounded-md border w-full" type="text" name="" id="productPrice" placeholder="Enter Price">
+            </div>
+
+            <div class="flex items-center justify-center gap-5">
+                <input class="p-3 rounded-md border w-full" type="text" name="" id="software" placeholder="Enter Software Details">
+                <input class="p-3 rounded-md border w-full" type="text" name="" id="graphics" placeholder="Enter Graphics Details">
+            </div>
+            <div class="flex items-center justify-center gap-5">
+                <input class="p-3 rounded-md border w-full" type="text" name="" id="displayType" placeholder="Enter Display Type">
+                <input class="p-3 rounded-md border w-full" type="text" name="" id="displaySize" placeholder="Enter Display Size">
+            </div>
+            <div class="flex items-center justify-center gap-5">
+                <input class="p-3 rounded-md border w-full" type="text" name="" id="displayResolution" placeholder="Enter Display Resolution">
+                <input class="p-3 rounded-md border w-full" type="text" name="" id="os" placeholder="Enter Operating System">
+            </div>
+
+            <div class="flex items-center justify-center gap-5">
+                <input class="p-3 rounded-md border w-full" type="text" name="" id="hdmi" placeholder="Enter HDMI port">
+                <input class="p-3 rounded-md border w-full" type="text" name="" id="memory" placeholder="Enter Memory Details">
+            </div>
+            <div class="flex items-center justify-center gap-5">
+                <input class="p-3 rounded-md border w-full" type="text" name="" id="fingerprint" placeholder="Enter Fingerprint details">
+                <input class="p-3 rounded-md border w-full" type="text" name="" id="selfieCamera" placeholder="Enter selfie camera details">
+            </div>
+            <div class="flex items-center justify-center gap-5">
+                <input class="p-3 rounded-md border w-full" type="text" name="" id="warranty" placeholder="Enter Warranty details">
+                <input class="p-3 rounded-md border w-full" type="text" name="" id="other features" placeholder="Enter other features">
+            </div>
+            <button onclick="handleAddNewLaptop()" class="p-3  text-white font-bold text-lg btn-grad hover:btn-grad:hover">Add Item</button>
+        </form>
+    </div>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
