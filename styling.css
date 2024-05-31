@@ -13,19 +13,23 @@ img {
 }
 
 .details {
-  position: absolute;
+  /* position: absolute; */
   top: 0;
-  left: 500px;
+  /* left: 500px; */
   padding: 10px;
 }
 
 button {
-  background-color: rgb(241, 126, 35);
+  background-color: rgb(22 163 74);
   border: none;
-  padding: 10px 25px;
+  padding: 15px 60px;
   text-align: center;
   font-size: 15px;
+  color: white;
+  font-weight: 900px;
   border-radius: 10px;
+  cursor: pointer;
+
 }
 
 a {
@@ -36,7 +40,7 @@ a {
 
 select {
   padding: 10px 25px;
-  background-color: rgb(255, 178, 127);
+  background-color: rgb(209 213 219);
   border: none;
   border-radius: 10px;
 }
@@ -60,4 +64,20 @@ li {
   font-family: "Lora", sans-serif;
   font-size: 20px;
   line-height: 25px;
+}
+
+.parent{
+  display: flex;
+  align-items: center;
+}
+
+.titleFont{
+  font-weight: 600;
+}
+
+.hiddens{
+  visibility: hidden;
+}
+.blocks{
+  visibility: visible;
 }
